@@ -344,3 +344,14 @@ MIT — Dan Fernandez / Primordial Omega Zero — 2026
 ---
 
 *"From hash chain to NIST PQC. Post-Key. Honest. Evolving."*
+
+## Test Videos
+
+All tests recorded live on AMD Ryzen 5 2600 (3.40 GHz), 16GB RAM, RX 580.
+
+| Video | Content | Result |
+|-------|---------|--------|
+| [Test 1 — Enterprise Deep Test](https://github.com/primordialomegazero/SpiralSEAL/blob/main/assets/test1_enterprise_deep.mp4) | 11/11 tests: TrueBootstrapper, MirrorBootstrapper, RecursiveFHE, Phi Constants, Performance | ALL PASSED |
+| [Test 2 — TPS Benchmark](https://github.com/primordialomegazero/SpiralSEAL/blob/main/assets/test2_tps_benchmark.mp4) | Single-core, Multi-core, Theoretical Maximum | 253,286 TPS (6-core) |
+| [Test 3 — 100K TPS Sustained](https://github.com/primordialomegazero/SpiralSEAL/blob/main/assets/test3_100k_sustained.mp4) | 30-second sustained throughput | 102,428 TPS, 3.18M ops |
+
