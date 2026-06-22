@@ -37,39 +37,39 @@ graph TB
     end
     
     subgraph "TrueBootstrapper — ct + Enc(0)"
-        C --> C1[Generate Enc(0) once]
-        C1 --> C2[ct ← ct + Enc(0)]
-        C2 --> C3[Value Preserved]
-        C3 --> C4[Noise Refreshed]
+        C --> C1["Generate Enc(0) once"]
+        C1 --> C2["ct ← ct + Enc(0)"]
+        C2 --> C3["Value Preserved"]
+        C3 --> C4["Noise Refreshed"]
     end
     
     subgraph "MirrorBootstrapper — Key Holder"
-        D --> D1[Decrypt]
-        D1 --> D2[Lyapunov Stabilize]
-        D2 --> D3[Re-encrypt]
-        D3 --> D4[Exponential Convergence]
+        D --> D1["Decrypt"]
+        D1 --> D2["Lyapunov Stabilize"]
+        D2 --> D3["Re-encrypt"]
+        D3 --> D4["Exponential Convergence"]
     end
     
     subgraph "RecursiveFHE — 7-Layer Fractal"
-        E --> E1[Initialize 7 Layers]
-        E1 --> E2[Propagate Down]
-        E2 --> E3[Propagate Up]
-        E3 --> E4[Self-Correct]
+        E --> E1["Initialize 7 Layers"]
+        E1 --> E2["Propagate Down"]
+        E2 --> E3["Propagate Up"]
+        E3 --> E4["Self-Correct"]
         E4 --> E5{Converged?}
         E5 -->|No| E2
-        E5 -->|Yes| E6[Deepest Layer Output]
+        E5 -->|Yes| E6["Deepest Layer Output"]
     end
     
-    C4 --> F[Refreshed Ciphertext]
+    C4 --> F["Refreshed Ciphertext"]
     D4 --> F
     E6 --> F
     
     subgraph "SpiralDB Integration"
-        F --> G[SpiralDB Bridge]
-        G --> H[PostgreSQL + Redis]
-        G --> I[Prometheus Metrics]
-        G --> J[Cerberus FHE]
-        H --> K[Preservation Layer]
+        F --> G["SpiralDB Bridge"]
+        G --> H["PostgreSQL + Redis"]
+        G --> I["Prometheus Metrics"]
+        G --> J["Cerberus FHE"]
+        H --> K["Preservation Layer"]
     end
 
     style A fill:#ff69b4,stroke:#ff1493,color:#000
@@ -88,12 +88,12 @@ The complete data flow from encryption through bootstrapping to preservation:
 %%{init: {'theme':'dark', 'themeVariables': { 'primaryColor':'#ff69b4','primaryTextColor':'#000','primaryBorderColor':'#ff1493','lineColor':'#ff69b4','secondaryColor':'#1a1a2e','tertiaryColor':'#16213e'}}}%%
 sequenceDiagram
     actor User
-    participant Enc as Encryptor
-    participant TB as TrueBootstrapper
-    participant MB as MirrorBootstrapper
-    participant RF as RecursiveFHE
-    participant DB as SpiralDB
-    participant PM as Prometheus
+    participant Enc["Encryptor"]
+    participant TB["TrueBootstrapper"]
+    participant MB["MirrorBootstrapper"]
+    participant RF["RecursiveFHE"]
+    participant DB["SpiralDB"]
+    participant PM["Prometheus"]
     
     User->>Enc: Plaintext m
     Enc->>Enc: ct = Enc(pk, m)
