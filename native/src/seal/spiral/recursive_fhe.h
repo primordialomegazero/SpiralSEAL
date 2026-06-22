@@ -34,11 +34,14 @@ public:
     };
 
     struct Config {
-        int recursion_depth = MAX_DEPTH;
-        double target_noise = 40.0;
-        int iterations_per_layer = 3;
-        bool enable_self_healing = true;
-        bool enable_lyapunov_damping = true;
+        int recursion_depth;
+        double target_noise;
+        int iterations_per_layer;
+        bool enable_self_healing;
+        bool enable_lyapunov_damping;
+        Config() : recursion_depth(MAX_DEPTH), target_noise(40.0), 
+                   iterations_per_layer(3), enable_self_healing(true),
+                   enable_lyapunov_damping(true) {}
     };
 
     struct Stats {

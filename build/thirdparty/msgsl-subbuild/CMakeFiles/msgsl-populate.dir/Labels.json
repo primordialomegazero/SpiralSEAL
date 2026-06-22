@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/data/SpiralSEAL-build/build/thirdparty/msgsl-subbuild/CMakeFiles/msgsl-populate"
+		},
+		{
+			"file" : "/data/SpiralSEAL-build/build/thirdparty/msgsl-subbuild/CMakeFiles/msgsl-populate.rule"
+		},
+		{
+			"file" : "/data/SpiralSEAL-build/build/thirdparty/msgsl-subbuild/CMakeFiles/msgsl-populate-complete.rule"
+		},
+		{
+			"file" : "/data/SpiralSEAL-build/build/thirdparty/msgsl-subbuild/msgsl-populate-prefix/src/msgsl-populate-stamp/msgsl-populate-build.rule"
+		},
+		{
+			"file" : "/data/SpiralSEAL-build/build/thirdparty/msgsl-subbuild/msgsl-populate-prefix/src/msgsl-populate-stamp/msgsl-populate-configure.rule"
+		},
+		{
+			"file" : "/data/SpiralSEAL-build/build/thirdparty/msgsl-subbuild/msgsl-populate-prefix/src/msgsl-populate-stamp/msgsl-populate-download.rule"
+		},
+		{
+			"file" : "/data/SpiralSEAL-build/build/thirdparty/msgsl-subbuild/msgsl-populate-prefix/src/msgsl-populate-stamp/msgsl-populate-install.rule"
+		},
+		{
+			"file" : "/data/SpiralSEAL-build/build/thirdparty/msgsl-subbuild/msgsl-populate-prefix/src/msgsl-populate-stamp/msgsl-populate-mkdir.rule"
+		},
+		{
+			"file" : "/data/SpiralSEAL-build/build/thirdparty/msgsl-subbuild/msgsl-populate-prefix/src/msgsl-populate-stamp/msgsl-populate-patch.rule"
+		},
+		{
+			"file" : "/data/SpiralSEAL-build/build/thirdparty/msgsl-subbuild/msgsl-populate-prefix/src/msgsl-populate-stamp/msgsl-populate-test.rule"
+		},
+		{
+			"file" : "/data/SpiralSEAL-build/build/thirdparty/msgsl-subbuild/msgsl-populate-prefix/src/msgsl-populate-stamp/msgsl-populate-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"msgsl-populate"
+		],
+		"name" : "msgsl-populate"
+	}
+}

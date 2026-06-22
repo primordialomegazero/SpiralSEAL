@@ -1,0 +1,10 @@
+build/
+*.o
+*.a
+*.so
+*.exe
+test_recursive_fhe
+test_true_bootstrapper
+test_mirror_bootstrapper
+*.pdf
+.DS_Store

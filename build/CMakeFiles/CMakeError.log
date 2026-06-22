@@ -1,0 +1,283 @@
+Performing C SOURCE FILE Test HAVE___ATTR__VIS_HIDDEN failed with the following output:
+Change Dir: /data/SpiralSEAL-build/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_6d71a/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_6d71a.dir/build.make CMakeFiles/cmTC_6d71a.dir/build
+gmake[1]: Entering directory '/data/SpiralSEAL-build/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_6d71a.dir/src.c.o
+/usr/bin/cc -DHAVE___ATTR__VIS_HIDDEN  -Werror -fPIE -o CMakeFiles/cmTC_6d71a.dir/src.c.o -c /data/SpiralSEAL-build/build/CMakeFiles/CMakeTmp/src.c
+/data/SpiralSEAL-build/build/CMakeFiles/CMakeTmp/src.c:3:9: error: ‘visibility’ attribute ignored [-Werror=attributes]
+    3 |         static void f(void) __attribute__ ((visibility("hidden")));
+      |         ^~~~~~
+cc1: all warnings being treated as errors
+gmake[1]: *** [CMakeFiles/cmTC_6d71a.dir/build.make:78: CMakeFiles/cmTC_6d71a.dir/src.c.o] Error 1
+gmake[1]: Leaving directory '/data/SpiralSEAL-build/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_6d71a/fast] Error 2
+
+
+Source file was:
+
+        #include <stdlib.h>
+        static void f(void) __attribute__ ((visibility("hidden")));
+        int main(void) {return 0;}
+    
+Performing C SOURCE FILE Test C_FLAG_QUNUSED_ARGUMENTS failed with the following output:
+Change Dir: /data/SpiralSEAL-build/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_4b470/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_4b470.dir/build.make CMakeFiles/cmTC_4b470.dir/build
+gmake[1]: Entering directory '/data/SpiralSEAL-build/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_4b470.dir/src.c.o
+/usr/bin/cc -DC_FLAG_QUNUSED_ARGUMENTS  -Wall -Wextra -Wundef -Wshadow -Wcast-align -Wcast-qual -Wstrict-prototypes  -fPIE   -Qunused-arguments -o CMakeFiles/cmTC_4b470.dir/src.c.o -c /data/SpiralSEAL-build/build/CMakeFiles/CMakeTmp/src.c
+cc: error: unrecognized command-line option '-Qunused-arguments'
+gmake[1]: *** [CMakeFiles/cmTC_4b470.dir/build.make:78: CMakeFiles/cmTC_4b470.dir/src.c.o] Error 1
+gmake[1]: Leaving directory '/data/SpiralSEAL-build/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_4b470/fast] Error 2
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C++ SOURCE FILE Test CXX_FLAG_QUNUSED_ARGUMENTS failed with the following output:
+Change Dir: /data/SpiralSEAL-build/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_77e3b/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_77e3b.dir/build.make CMakeFiles/cmTC_77e3b.dir/build
+gmake[1]: Entering directory '/data/SpiralSEAL-build/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_77e3b.dir/src.cxx.o
+/usr/bin/c++ -DCXX_FLAG_QUNUSED_ARGUMENTS  -Wall -Wextra -Wundef -Wshadow -Wcast-align -Wcast-qual  -fPIE   -Qunused-arguments -o CMakeFiles/cmTC_77e3b.dir/src.cxx.o -c /data/SpiralSEAL-build/build/CMakeFiles/CMakeTmp/src.cxx
+c++: error: unrecognized command-line option '-Qunused-arguments'
+gmake[1]: *** [CMakeFiles/cmTC_77e3b.dir/build.make:78: CMakeFiles/cmTC_77e3b.dir/src.cxx.o] Error 1
+gmake[1]: Leaving directory '/data/SpiralSEAL-build/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_77e3b/fast] Error 2
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test SEAL__UMUL128_FOUND failed with the following compile output:
+Change Dir: /data/SpiralSEAL-build/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_5a61a/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_5a61a.dir/build.make CMakeFiles/cmTC_5a61a.dir/build
+gmake[1]: Entering directory '/data/SpiralSEAL-build/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_5a61a.dir/src.cxx.o
+/usr/bin/c++ -DSEAL__UMUL128_FOUND  -O0 -std=c++17 -fPIE -o CMakeFiles/cmTC_5a61a.dir/src.cxx.o -c /data/SpiralSEAL-build/build/CMakeFiles/CMakeTmp/src.cxx
+/data/SpiralSEAL-build/build/CMakeFiles/CMakeTmp/src.cxx: In function ‘int main()’:
+/data/SpiralSEAL-build/build/CMakeFiles/CMakeTmp/src.cxx:7:17: error: ‘_umul128’ was not declared in this scope; did you mean ‘__m128’?
+    7 |             d = _umul128(a, b, &c);
+      |                 ^~~~~~~~
+      |                 __m128
+gmake[1]: *** [CMakeFiles/cmTC_5a61a.dir/build.make:78: CMakeFiles/cmTC_5a61a.dir/src.cxx.o] Error 1
+gmake[1]: Leaving directory '/data/SpiralSEAL-build/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_5a61a/fast] Error 2
+
+
+...and run output:
+
+Return value: 1
+Source file was:
+
+        #include <x86intrin.h>
+        int main() {
+            unsigned long long a = 0, b = 0;
+            unsigned long long c;
+            volatile unsigned long long d;
+            d = _umul128(a, b, &c);
+            return 0;
+        }
+Performing C++ SOURCE FILE Test SEAL___UMULH_FOUND failed with the following compile output:
+Change Dir: /data/SpiralSEAL-build/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_7992d/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_7992d.dir/build.make CMakeFiles/cmTC_7992d.dir/build
+gmake[1]: Entering directory '/data/SpiralSEAL-build/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_7992d.dir/src.cxx.o
+/usr/bin/c++ -DSEAL___UMULH_FOUND  -O0 -std=c++17 -fPIE -o CMakeFiles/cmTC_7992d.dir/src.cxx.o -c /data/SpiralSEAL-build/build/CMakeFiles/CMakeTmp/src.cxx
+/data/SpiralSEAL-build/build/CMakeFiles/CMakeTmp/src.cxx: In function ‘int main()’:
+/data/SpiralSEAL-build/build/CMakeFiles/CMakeTmp/src.cxx:6:17: error: ‘__umulh’ was not declared in this scope; did you mean ‘_m_pmulhw’?
+    6 |             c = __umulh(a, b);
+      |                 ^~~~~~~
+      |                 _m_pmulhw
+gmake[1]: *** [CMakeFiles/cmTC_7992d.dir/build.make:78: CMakeFiles/cmTC_7992d.dir/src.cxx.o] Error 1
+gmake[1]: Leaving directory '/data/SpiralSEAL-build/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_7992d/fast] Error 2
+
+
+...and run output:
+
+Return value: 1
+Source file was:
+
+        #include <x86intrin.h>
+        int main() {
+            unsigned long long a = 0, b = 0;
+            volatile unsigned long long c;
+            c = __umulh(a, b);
+            return 0;
+        }
+Performing C++ SOURCE FILE Test SEAL__BITSCANREVERSE64_FOUND failed with the following compile output:
+Change Dir: /data/SpiralSEAL-build/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_a171c/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_a171c.dir/build.make CMakeFiles/cmTC_a171c.dir/build
+gmake[1]: Entering directory '/data/SpiralSEAL-build/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_a171c.dir/src.cxx.o
+/usr/bin/c++ -DSEAL__BITSCANREVERSE64_FOUND  -O0 -std=c++17 -fPIE -o CMakeFiles/cmTC_a171c.dir/src.cxx.o -c /data/SpiralSEAL-build/build/CMakeFiles/CMakeTmp/src.cxx
+/data/SpiralSEAL-build/build/CMakeFiles/CMakeTmp/src.cxx: In function ‘int main()’:
+/data/SpiralSEAL-build/build/CMakeFiles/CMakeTmp/src.cxx:5:42: error: ‘_BitScanReverse64’ was not declared in this scope
+    5 |             volatile unsigned char res = _BitScanReverse64(&a, b);
+      |                                          ^~~~~~~~~~~~~~~~~
+gmake[1]: *** [CMakeFiles/cmTC_a171c.dir/build.make:78: CMakeFiles/cmTC_a171c.dir/src.cxx.o] Error 1
+gmake[1]: Leaving directory '/data/SpiralSEAL-build/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_a171c/fast] Error 2
+
+
+...and run output:
+
+Return value: 1
+Source file was:
+
+        #include <x86intrin.h>
+        int main() {
+            unsigned long a = 0, b = 0;
+            volatile unsigned char res = _BitScanReverse64(&a, b);
+            return 0;
+        }
+Performing C++ SOURCE FILE Test SEAL___BUILTIN_ADDCLL_FOUND failed with the following compile output:
+Change Dir: /data/SpiralSEAL-build/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_09a12/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_09a12.dir/build.make CMakeFiles/cmTC_09a12.dir/build
+gmake[1]: Entering directory '/data/SpiralSEAL-build/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_09a12.dir/src.cxx.o
+/usr/bin/c++ -DSEAL___BUILTIN_ADDCLL_FOUND  -O0 -std=c++17 -fPIE -o CMakeFiles/cmTC_09a12.dir/src.cxx.o -c /data/SpiralSEAL-build/build/CMakeFiles/CMakeTmp/src.cxx
+/data/SpiralSEAL-build/build/CMakeFiles/CMakeTmp/src.cxx: In function ‘int main()’:
+/data/SpiralSEAL-build/build/CMakeFiles/CMakeTmp/src.cxx:4:37: error: ‘__builtin_addcll’ was not declared in this scope; did you mean ‘__builtin_modfl’?
+    4 |                 volatile auto res = __builtin_addcll(0,0,0,&a);
+      |                                     ^~~~~~~~~~~~~~~~
+      |                                     __builtin_modfl
+gmake[1]: *** [CMakeFiles/cmTC_09a12.dir/build.make:78: CMakeFiles/cmTC_09a12.dir/src.cxx.o] Error 1
+gmake[1]: Leaving directory '/data/SpiralSEAL-build/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_09a12/fast] Error 2
+
+
+...and run output:
+
+Return value: 1
+Source file was:
+
+            int main() {
+                unsigned long long a;
+                volatile auto res = __builtin_addcll(0,0,0,&a);
+                return 0;
+            }
+Performing C++ SOURCE FILE Test SEAL___BUILTIN_SUBCLL_FOUND failed with the following compile output:
+Change Dir: /data/SpiralSEAL-build/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_16627/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_16627.dir/build.make CMakeFiles/cmTC_16627.dir/build
+gmake[1]: Entering directory '/data/SpiralSEAL-build/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_16627.dir/src.cxx.o
+/usr/bin/c++ -DSEAL___BUILTIN_SUBCLL_FOUND  -O0 -std=c++17 -fPIE -o CMakeFiles/cmTC_16627.dir/src.cxx.o -c /data/SpiralSEAL-build/build/CMakeFiles/CMakeTmp/src.cxx
+/data/SpiralSEAL-build/build/CMakeFiles/CMakeTmp/src.cxx: In function ‘int main()’:
+/data/SpiralSEAL-build/build/CMakeFiles/CMakeTmp/src.cxx:4:37: error: ‘__builtin_subcll’ was not declared in this scope; did you mean ‘__builtin_truncl’?
+    4 |                 volatile auto res = __builtin_subcll(0,0,0,&a);
+      |                                     ^~~~~~~~~~~~~~~~
+      |                                     __builtin_truncl
+gmake[1]: *** [CMakeFiles/cmTC_16627.dir/build.make:78: CMakeFiles/cmTC_16627.dir/src.cxx.o] Error 1
+gmake[1]: Leaving directory '/data/SpiralSEAL-build/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_16627/fast] Error 2
+
+
+...and run output:
+
+Return value: 1
+Source file was:
+
+            int main() {
+                unsigned long long a;
+                volatile auto res = __builtin_subcll(0,0,0,&a);
+                return 0;
+            }
+Determining if the SecureZeroMemory exist failed with the following output:
+Change Dir: /data/SpiralSEAL-build/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_72b98/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_72b98.dir/build.make CMakeFiles/cmTC_72b98.dir/build
+gmake[1]: Entering directory '/data/SpiralSEAL-build/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_72b98.dir/CheckSymbolExists.c.o
+/usr/bin/cc   -fPIE -o CMakeFiles/cmTC_72b98.dir/CheckSymbolExists.c.o -c /data/SpiralSEAL-build/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/data/SpiralSEAL-build/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:2:10: fatal error: Windows.h: No such file or directory
+    2 | #include <Windows.h>
+      |          ^~~~~~~~~~~
+compilation terminated.
+gmake[1]: *** [CMakeFiles/cmTC_72b98.dir/build.make:78: CMakeFiles/cmTC_72b98.dir/CheckSymbolExists.c.o] Error 1
+gmake[1]: Leaving directory '/data/SpiralSEAL-build/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_72b98/fast] Error 2
+
+
+File /data/SpiralSEAL-build/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <Windows.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef SecureZeroMemory
+  return ((int*)(&SecureZeroMemory))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Performing C++ SOURCE FILE Test SEAL_MEMSET_S_FOUND failed with the following compile output:
+Change Dir: /data/SpiralSEAL-build/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_50c96/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_50c96.dir/build.make CMakeFiles/cmTC_50c96.dir/build
+gmake[1]: Entering directory '/data/SpiralSEAL-build/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_50c96.dir/src.cxx.o
+/usr/bin/c++ -DSEAL_MEMSET_S_FOUND  -fPIE -o CMakeFiles/cmTC_50c96.dir/src.cxx.o -c /data/SpiralSEAL-build/build/CMakeFiles/CMakeTmp/src.cxx
+/data/SpiralSEAL-build/build/CMakeFiles/CMakeTmp/src.cxx: In function ‘int main()’:
+/data/SpiralSEAL-build/build/CMakeFiles/CMakeTmp/src.cxx:7:17: error: ‘memset_s’ was not declared in this scope; did you mean ‘memset’?
+    7 |         int r = memset_s(str, sizeof(str), 'a', 5);
+      |                 ^~~~~~~~
+      |                 memset
+gmake[1]: *** [CMakeFiles/cmTC_50c96.dir/build.make:78: CMakeFiles/cmTC_50c96.dir/src.cxx.o] Error 1
+gmake[1]: Leaving directory '/data/SpiralSEAL-build/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_50c96/fast] Error 2
+
+
+...and run output:
+
+Return value: 1
+Source file was:
+
+    #define __STDC_WANT_LIB_EXT1__ 1
+    #include <string.h>
+    int main(void)
+    {
+        char str[] = "ghghghghghghghghghghgh";
+        int r = memset_s(str, sizeof(str), 'a', 5);
+        return r;
+    }
+Determining if the explicit_memset exist failed with the following output:
+Change Dir: /data/SpiralSEAL-build/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_d1092/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_d1092.dir/build.make CMakeFiles/cmTC_d1092.dir/build
+gmake[1]: Entering directory '/data/SpiralSEAL-build/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_d1092.dir/CheckSymbolExists.c.o
+/usr/bin/cc   -fPIE -o CMakeFiles/cmTC_d1092.dir/CheckSymbolExists.c.o -c /data/SpiralSEAL-build/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/data/SpiralSEAL-build/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/data/SpiralSEAL-build/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:19: error: ‘explicit_memset’ undeclared (first use in this function)
+    8 |   return ((int*)(&explicit_memset))[argc];
+      |                   ^~~~~~~~~~~~~~~
+/data/SpiralSEAL-build/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:19: note: each undeclared identifier is reported only once for each function it appears in
+gmake[1]: *** [CMakeFiles/cmTC_d1092.dir/build.make:78: CMakeFiles/cmTC_d1092.dir/CheckSymbolExists.c.o] Error 1
+gmake[1]: Leaving directory '/data/SpiralSEAL-build/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_d1092/fast] Error 2
+
+
+File /data/SpiralSEAL-build/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <string.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef explicit_memset
+  return ((int*)(&explicit_memset))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}

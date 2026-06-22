@@ -1,0 +1,3 @@
+/data/SpiralSEAL-build/build/thirdparty/msgsl-subbuild/CMakeFiles/msgsl-populate.dir
+/data/SpiralSEAL-build/build/thirdparty/msgsl-subbuild/CMakeFiles/edit_cache.dir
+/data/SpiralSEAL-build/build/thirdparty/msgsl-subbuild/CMakeFiles/rebuild_cache.dir
