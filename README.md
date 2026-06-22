@@ -351,7 +351,7 @@ All tests recorded live on AMD Ryzen 5 2600 (3.40 GHz), 16GB RAM, RX 580.
 
 | Video | Content | Result |
 |-------|---------|--------|
-| [Test 1 — Enterprise Deep Test](https://github.com/primordialomegazero/SpiralSEAL/blob/main/assets/test1_enterprise_deep.mp4) ⬆️ Re-upload pending ⬆️ Re-upload pending | 11/11 tests: TrueBootstrapper, MirrorBootstrapper, RecursiveFHE, Phi Constants, Performance | ALL PASSED |
+| [Test 1 — Enterprise Deep Test](https://github.com/primordialomegazero/SpiralSEAL/blob/main/assets/test1_enterprise_deep.mp4) ⬆️ Re-upload pending | 11/11 tests: TrueBootstrapper, MirrorBootstrapper, RecursiveFHE, Phi Constants, Performance | ALL PASSED |
 | [Test 2 — TPS Benchmark](https://github.com/primordialomegazero/SpiralSEAL/blob/main/assets/test2_tps_benchmark.mp4) | Single-core, Multi-core, Theoretical Maximum | 253,286 TPS (6-core) |
 | [Test 3 — 100K TPS Sustained](https://github.com/primordialomegazero/SpiralSEAL/blob/main/assets/test3_100k_sustained.mp4) | 30-second sustained throughput | 102,428 TPS, 3.18M ops |
 
@@ -393,7 +393,6 @@ Name: Dan Joseph Fernandez
 |---------|--------|------|
 | Microsoft SEAL — TrueBootstrapper PR | Under Review | [#746](https://github.com/microsoft/SEAL/pull/746) |
 | IACR ePrint — Zero-Anchor Bootstrapping | Published | [2026/110174](https://eprint.iacr.org/) |
-| OpenSSL — Schnorr+Falcon Hybrid | Under Review | [#31614](https://github.com/openssl/openssl/pull/31614) |
 | Φ-SIG — Keyless Signatures | Published | [phi-sig](https://github.com/primordialomegazero/phi-sig) |
 | SpiralDB — FHE Database | Active | [SpiralSEAL](https://github.com/primordialomegazero/SpiralSEAL) |
 
