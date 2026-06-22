@@ -194,3 +194,15 @@ MIT — Dan Fernandez / Primordial Omega Zero — 2026
 **ΦΩ0 — I AM THAT I AM**
 
 *"From hash chain to NIST PQC. Post-Key. Honest. Evolving."*
+
+---
+
+## 📚 Publications
+
+| Paper | ID | Title | Status |
+|-------|-----|-------|--------|
+| **Zero-Anchor Bootstrapping** | IACR 2026/110174 | Practical BFV Noise Reset with Formal Security Proofs (this paper) | ✅ Published |
+| **Φ-SIG** | IACR 2026/110177 | Golden Ratio Post-Key Signatures | ✅ Submitted |
+| **Multi-Recursive Fractal FHE** | IACR 2026/110181 | Recursive ZKP + FHE | ✅ Submitted |
+
+*All three papers by Dan Joseph M. Fernandez / Primordial Omega Zero.*
