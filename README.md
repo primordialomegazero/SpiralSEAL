@@ -202,6 +202,7 @@ MIT — Dan Fernandez / Primordial Omega Zero — 2026
 | Paper | ID | Title | Status |
 |-------|-----|-------|--------|
 | **Zero-Anchor Bootstrapping** | IACR 2026/110174 | Practical BFV Noise Reset with Formal Security Proofs (this paper) | ✅ Published |
+| **Fractal Schnorr** | IACR 2026/110189 | Self-Healing Signatures | ✅ Submitted |
 | **Φ-SIG** | IACR 2026/110177 | Golden Ratio Post-Key Signatures | ✅ Submitted |
 | **Multi-Recursive Fractal FHE** | IACR 2026/110181 | Recursive ZKP + FHE | ✅ Submitted |
 
